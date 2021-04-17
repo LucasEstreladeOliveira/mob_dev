@@ -17,7 +17,7 @@ export default _ => {
 
     return (
         <Tab.Navigator style={styles.justifyCenter} tabBarOptions={{
-            activeTintColor: '#FFFFFF ',
+            activeTintColor: '#FFFFFF',
             inactiveTintColor: '#A6ACCD',
             activeBackgroundColor: '#717CB470',
             inactiveBackgroundColor: '#292D3E',
