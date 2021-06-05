@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, Button, View, TextInput, StyleSheet, ScrollView } from 'react-native'
+import Item from './Item'
 
 export default _ => {
   const [text, changeText] = React.useState('');
@@ -34,10 +35,6 @@ export default _ => {
       display: 'flex',
       width: '100%',
     },
-    task: {
-      width: '100%',
-      padding: 10,
-    },
     taskText: {
       display: 'flex',
       justifyContent: 'center',
@@ -48,7 +45,7 @@ export default _ => {
       width: '100%',
       paddingTop: 10,
       paddingBottom: 10,
-      borderRadius: 8
+      borderRadius: 8,
     },
     buttonWrapper: {
       display: 'flex',
@@ -88,9 +85,7 @@ export default _ => {
       </View>  
       <ScrollView style={styles.tasksWrapper}>
           { tasks.map( (task, key) => {
-            return <View key={key} style={styles.task}>
-              <Text style={styles.taskText}>{ task }</Text>
-            </View>
+            return <Item task={task} key={key} />
           })}
       </ScrollView>
     </View>
